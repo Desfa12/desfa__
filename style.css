@@ -1,0 +1,76 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-image: linear-gradient(
+    to right,
+    yellow,
+    pink,
+    yellow,
+    pink,
+    yellow,
+    pink,
+    yellow
+  );
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+p {
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.kotak {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation: berjalan 7s infinite alternate ease-in-out,
+    warna 5s infinite linear;
+  margin-top: 20px;
+}
+
+@keyframes berjalan {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: calc(100vw - 100px);
+    /* Batas layar minus lebar kotak dan sedikit jarak */
+  }
+}
+
+@keyframes warna {
+  0% {
+    background-color: red;
+  }
+
+  25% {
+    background-color: aqua;
+  }
+
+  50% {
+    background-color: salmon;
+  }
+
+  75% {
+    background-color: greenyellow;
+  }
+
+  100% {
+    background-color: rgb(212, 121, 212);
+  }
+}
